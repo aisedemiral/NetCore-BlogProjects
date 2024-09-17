@@ -1,0 +1,21 @@
+@using Mvc_Projem.Models
+@model RoleUpdateViewModel
+
+@{
+    ViewBag.Title = "UpdateRole";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Rol Düzenleme Sayfası</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label>Role ID</label>
+        <input type="text" name="Id" value="@Model.Id" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Role Başlığı</label>
+        <input type="text" name="name" value="@Model.Name" class="form-control"/>
+    </div>
+    <button class="btn btn-success">Rolü Güncelle</button>
+</form>

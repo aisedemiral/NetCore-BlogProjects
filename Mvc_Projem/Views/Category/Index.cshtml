@@ -1,0 +1,29 @@
+@using Mvc_Projem.EntityLayer.Concrete
+@model List<Mvc_Projem.EntityLayer.Concrete.Category>
+
+@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<table class="table table-bordered">
+    <tr>
+        <th>Category ID</th>
+        <th>Category Adı</th>
+        <th>Category Durumu</th>
+        <th>Category Detayı</th>
+        <th>Category Sil</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CategoryID</td>
+            <td>@item.CategoryName</td>
+            <td>@item.CategoryStatus</td>
+            <td>@item.CategoryDescription</td>
+            <td><a href="#" class="btn btn-warning">Detaylar</a></td>
+            <td><a href="#" class="btn btn-danger">sil</a></td>
+
+        </tr>
+    }
+</table>
